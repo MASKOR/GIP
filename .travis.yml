@@ -10,10 +10,10 @@ before_install:
   - export REPOSITORY_NAME=${PWD##*/}
   - echo "Testing branch $TRAVIS_BRANCH of $REPOSITORY_NAME"
 
-install:
-  - mkdir -p ~/testbuild/src
-  - cd ~/testbuild/src
-  - ln -s $CI_SOURCE_PATH . # Link the repo we are testing to the new workspace
+#install:
+#  - mkdir -p ~/testbuild/src
+#  - cd ~/testbuild/src
+#  - ln -s $CI_SOURCE_PATH . # Link the repo we are testing to the new workspace
 
 script: # All commands must exit with code 0 on success. Anything else is considered failure.
    - pwd
