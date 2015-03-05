@@ -1,0 +1,28 @@
+language: cpp
+compiler:
+  - gcc
+
+env:
+  global:
+
+before_install:
+  - export CI_SOURCE_PATH=$(pwd)
+  - export REPOSITORY_NAME=${PWD##*/}
+  - echo "Testing branch $TRAVIS_BRANCH of $REPOSITORY_NAME"
+
+install:
+  - mkdir -p ~/testbuild/src
+  - cd ~/testbuild/src
+  - ln -s $CI_SOURCE_PATH . # Link the repo we are testing to the new workspace
+
+script: # All commands must exit with code 0 on success. Anything else is considered failure.
+   - make
+
+notifications:
+  webhooks:
+    urls:
+    - https://webhooks.gitter.im/e/75765823264a8917f62b
+    on_success: change
+    on_failure: always
+    on_start: false
+
