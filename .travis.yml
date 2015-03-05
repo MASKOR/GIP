@@ -16,6 +16,7 @@ install:
   - ln -s $CI_SOURCE_PATH . # Link the repo we are testing to the new workspace
 
 script: # All commands must exit with code 0 on success. Anything else is considered failure.
+   - pwd
    - make
 
 notifications:
