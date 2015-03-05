@@ -17,6 +17,7 @@ install:
 
 script: # All commands must exit with code 0 on success. Anything else is considered failure.
    - pwd
+   - ls -la
    - make
 
 notifications:
