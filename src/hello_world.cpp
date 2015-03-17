@@ -7,5 +7,6 @@ int main(int argc, char* argv[]) {
 
   std::cout << "UCT is awesome!!!" << std::endl;
   std::cout << "No. Batman is awesome!!!" << std::endl;
+  std::cout << "NANANANANANNANANANANANANAN" << std::endl;
   return 0;
 }
