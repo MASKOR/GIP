@@ -1,8 +1,8 @@
 #include <iostream>
 
-int main(int argc, char* argv[]) {
+int main() {
   //Hallo
-  
+
   std::cout << "Hello World!" << std::endl;
 
   std::cout << "UCT is awesome!!!" << std::endl;
